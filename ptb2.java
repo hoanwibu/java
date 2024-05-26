@@ -24,4 +24,4 @@ public class ptb2 {
         }
         input.close();
     }
-    }
+}
