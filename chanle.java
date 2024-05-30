@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class chanle{
-    public static void main(String [] agrs){
+    public static void main(String agrs []){
         Scanner sc = new Scanner(System.in);
         System.out.println("nhap a");
         int a = sc.nextInt();

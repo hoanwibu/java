@@ -1,5 +1,6 @@
 import java.util.Date;
 public class tif{
+    @SuppressWarnings("deprecation")
     public static void main (String [] args){
         Date today = new Date();
         //if (today.getDay()==0 )

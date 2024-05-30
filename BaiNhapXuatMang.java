@@ -8,13 +8,13 @@ public class BaiNhapXuatMang {
         int arrInt[] = new int[n];
         System.out.println();
         System.out.println("Nhap mang: ");
-        int max, min;
-        min = max = arrInt[0];
         for (int i = 0; i < n; i++) {
             System.out.print("This is arrInt[" + i + "]: ");
             arrInt[i] = sc.nextInt();
         }
         // Min Max
+        int max, min;
+        min = max = arrInt[0];
         for (int i = 0; i < n; i++) {
             if (arrInt[i] < min)
                 min = arrInt[i];
@@ -28,7 +28,7 @@ public class BaiNhapXuatMang {
         }
         System.out.println();
         System.out.println("Min: " + min + ", " + "Max: " + max);
-        // Tổng chắn lẻ của mảng
+        // Tổng chẵn lẻ của mảng
         int S = 0, X = 0;
         for (int i = 0; i < n; i++) {
             if (arrInt[i] % 2 == 0) {
@@ -38,7 +38,7 @@ public class BaiNhapXuatMang {
         }
         System.out.println();
         System.out.println("Tong chan la: " + S + ", " + "Tong le la: " + X);
-        // Thuật toán sắp xêp Bubble Sort
+        // Thuật toán sắp xếp Bubble Sort
         int t;
         System.out.println();
         System.out.println("Mang tang dan da sap xep lai la: ");
@@ -68,6 +68,12 @@ public class BaiNhapXuatMang {
         for (int i = 0; i < n; i++) {
             System.out.println(" " + arrInt[i]);
         }
+        System.out.println();
+        int Tong = 0;// Tính tổng phần tử của mảng
+        for (int i = 0; i < n; i++) {
+            Tong += arrInt[i];
+        }
+        System.out.println("Tong phan tu cua mang la: " + Tong);
         sc.close();
     }
 }
