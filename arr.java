@@ -48,5 +48,4 @@ public class arr {
         System.out.println(tong);
 
     }
-
 }
