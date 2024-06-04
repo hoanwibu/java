@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ptb2 {
+public class ptb3 {
     public static void main(String[] args) {
         int d;
         Scanner input = new Scanner(System.in);
