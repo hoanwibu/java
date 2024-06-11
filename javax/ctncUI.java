@@ -107,7 +107,7 @@ public class ctncUI extends JFrame {
 
         btnThoat.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                int ret = JOptionPane.showConfirmDialog(null, "ban co muon thoat", "thoa", JOptionPane.YES_NO_OPTION);
+                int ret = JOptionPane.showConfirmDialog(null, "ban co muon thoat", "thoat", JOptionPane.YES_NO_OPTION);
                 if (ret == JOptionPane.YES_NO_OPTION)
                     System.exit(0);
             }
