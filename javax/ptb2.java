@@ -88,7 +88,7 @@ public class ptb2 extends JFrame {
                     txtkq.setText("pt co ng duy nhat\n");
                     txtkq.setText(" " + -b / 2 * a);
                 } else if (d > 0) {
-                    float x1 = (float) ((-b + Math.sqrt(d)) / (2 * a)); 
+                    float x1 = (float) ((-b + Math.sqrt(d)) / (2 * a));
                     float x2 = (float) ((-b - Math.sqrt(d)) / (2 * a));
                     txtkq.setText("x1 = " + x1 + "\nx2 = " + x2);
                 }
