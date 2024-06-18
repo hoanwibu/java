@@ -19,7 +19,7 @@ public class cal {
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new BorderLayout());
         JPanel northPanel = new JPanel();
-        northPanel.setLayout(new BorderLayout(2, 2));
+        northPanel.setLayout(new BorderLayout(3, 3));
         JTextField tfield = new JTextField();
         northPanel.add(tfield, BorderLayout.CENTER);
 
@@ -56,8 +56,8 @@ public class cal {
         gbc.gridwidth = 1;
         gbc.gridheight = 2;
         centerPanel.add(button[counter++], gbc);
-        gbc.gridwidth = 1;
-        gbc.gridx = 2;
+        gbc.gridwidth = 2;
+        gbc.gridx = 0;
         gbc.gridy = 4;
         centerPanel.add(button[counter++], gbc);
 

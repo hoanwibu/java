@@ -65,40 +65,40 @@ public class GDSinhVien extends JFrame implements ActionListener, MouseListener 
 
     private void buildGUI() {
         JPanel pnlLeft = new JPanel(new GridLayout(0, 1));
-        pnlLeft.add(new JLabel("Thong tin sinh vien", JLabel.CENTER));
-        pnlLeft.add(new JLabel("ma sinh vien:  "));
+        pnlLeft.add(new JLabel("Thông tin sinh viên", JLabel.CENTER));
+        pnlLeft.add(new JLabel("mã sinh viên:  "));
         pnlLeft.add(tfMaso = new JTextField(20));
-        pnlLeft.add(new JLabel("Ho Va Ten:  "));
+        pnlLeft.add(new JLabel("Họ và Tên:  "));
         pnlLeft.add(tfHoten = new JTextField(20));
-        pnlLeft.add(new JLabel("Ma Lop"));
+        pnlLeft.add(new JLabel("Mã Lớp"));
         pnlLeft.add(cbomalop = new JComboBox<String>());
         String[] dslop = { "DHTHA", "DHTHB", "DHTHC", "DHTHD", "DHTHK" };
         for (int i = 0; i < dslop.length; i++) {
             cbomalop.addItem(dslop[i]);
         }
-        pnlLeft.add(new JLabel("diem ly thuyet  "));
+        pnlLeft.add(new JLabel("điểm lý thuyết  "));
         pnlLeft.add(tfdiemLT = new JTextField(20));
-        pnlLeft.add(new JLabel("diem thuc hanh"));
+        pnlLeft.add(new JLabel("điểm thực hành"));
         pnlLeft.add(tfdiemTH = new JTextField(20));
-        pnlLeft.add(new JLabel("diem trung binh"));
+        pnlLeft.add(new JLabel("điểm trung bình"));
         pnlLeft.add(tfdiemTB = new JTextField(20));
         tfdiemTB.setEditable(false);
-        pnlLeft.add(new JLabel("ket qua"));
+        pnlLeft.add(new JLabel("kết quả"));
         pnlLeft.add(tfKQ = new JTextField(20));
         tfKQ.setEditable(false);
 
         JPanel pnlLeftBottom;
         pnlLeft.add(pnlLeftBottom = new JPanel());
-        pnlLeftBottom.add(bttKQ = new JButton("ket qua"));
-        pnlLeftBottom.add(bttThem = new JButton("them"));
+        pnlLeftBottom.add(bttKQ = new JButton("kết quả"));
+        pnlLeftBottom.add(bttThem = new JButton("thêm"));
         pnlLeftBottom.add(bttClear = new JButton("clear"));
 
         JPanel pnlLeftBottom2;
         pnlLeft.add(pnlLeftBottom2 = new JPanel());
-        pnlLeftBottom2.add(bttLuu = new JButton("luu"));
-        pnlLeftBottom2.add(bttXoa = new JButton("xoa"));
-        pnlLeftBottom2.add(bttSua = new JButton("sua"));
-        pnlLeftBottom2.add(bttTim = new JButton("tim"));
+        pnlLeftBottom2.add(bttLuu = new JButton("lưu"));
+        pnlLeftBottom2.add(bttXoa = new JButton("xóa"));
+        pnlLeftBottom2.add(bttSua = new JButton("sửa"));
+        pnlLeftBottom2.add(bttTim = new JButton("tìm"));
 
         JPanel pnlRight = new JPanel(new GridLayout(1, 1));
         String[] headers = { "masv", "hoten", "lop", "Ly thuyet", "Thuc hanh", "Trung Binh", "Ket Qua" };
