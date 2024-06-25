@@ -5,51 +5,70 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ptb2 extends JFrame {
-    public ptb2(String title) {
-        setTitle(title);
-    }
+public class ptb2 {
 
-    public void doShow() {
-        setSize(400, 300);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        addControl();
-        setResizable(true);
-        setVisible(true);
-    }
+    public void GUI() {
+        JFrame f = new JFrame();
+        f.setSize(400, 300);
+        f.setLocationRelativeTo(null);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setResizable(true);
 
-    public void addControl() {
         JPanel pnBorder = new JPanel();
         pnBorder.setLayout(new BorderLayout());
+
         JPanel pnNorth = new JPanel();
         JLabel lblTitle = new JLabel("Phương Trình Bậc 2");
+        pnNorth.setPreferredSize(new Dimension(0, 30));
+        pnNorth.setBackground(Color.CYAN);
         pnNorth.add(lblTitle);
-        add(pnNorth);
+        pnBorder.add(pnNorth, BorderLayout.NORTH);
+
         JPanel pnCenter = new JPanel();
+        pnCenter.setLayout(new BoxLayout(pnCenter, BoxLayout.Y_AXIS));
+        pnCenter.setBackground(Color.RED);
+        pnCenter.setPreferredSize(new Dimension(0, 100));
+
+        JPanel pna = new JPanel();
+        pna.setBackground(Color.RED);
+
         JLabel lblA = new JLabel("a");
+        JTextField txtA = new JTextField(10);
+        pna.add(lblA);
+        pna.add(txtA);
+        pnCenter.add(pna);
+
+        JPanel pnb = new JPanel();
         JLabel lblB = new JLabel("b");
+        JTextField txtB = new JTextField(10);
+        pnb.add(lblB);
+        pnb.add(txtB);
+        pnCenter.add(pnb);
+
+        JPanel pnc = new JPanel();
         JLabel lblC = new JLabel("c");
-        JTextField txtA = new JTextField(3);
-        JTextField txtB = new JTextField(3);
-        JTextField txtC = new JTextField(3);
-        pnCenter.add(lblA);
-        pnCenter.add(txtA);
-        pnCenter.add(lblB);
-        pnCenter.add(txtB);
-        pnCenter.add(lblC);
-        pnCenter.add(txtC);
-        JButton btnTinh = new JButton("Tính");
-        JButton btnThoat = new JButton("Thoát");
-        pnCenter.add(btnTinh);
-        pnCenter.add(btnThoat);
+        JTextField txtC = new JTextField(10);
+        pnc.add(lblC);
+        pnc.add(txtC);
+        pnCenter.add(pnc);
+
         JPanel pnkq = new JPanel();
         JLabel lblkq = new JLabel("ket qua");
-        final JTextArea txtkq = new JTextArea(5, 10);
+        final JTextArea txtkq = new JTextArea(2, 10);
         pnkq.add(lblkq);
         pnkq.add(txtkq);
         pnCenter.add(pnkq);
-        add(pnCenter, BorderLayout.CENTER);
+
+        JPanel pnbt = new JPanel();
+        JButton btnTinh = new JButton("Tính");
+        JButton btnThoat = new JButton("Thoát");
+        pnbt.add(btnTinh);
+        pnbt.add(btnThoat);
+        pnCenter.add(pnbt);
+
+        pnBorder.add(pnCenter);
+
+        f.add(pnBorder);
         btnThoat.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 int ret = JOptionPane.showConfirmDialog(null, "Bạn có muốn thoát", "Thoát", JOptionPane.YES_NO_OPTION);
@@ -57,6 +76,7 @@ public class ptb2 extends JFrame {
                     System.exit(0);
             }
         });
+
         btnTinh.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 String sa = txtA.getText();
@@ -97,10 +117,10 @@ public class ptb2 extends JFrame {
             }
 
         });
+        f.setVisible(true);
     };
 
     public static void main(String[] args) {
-        ptb2 ui = new ptb2("Phương Trình Bậc 2");
-        ui.doShow();
+        new ptb2().GUI();
     }
 }

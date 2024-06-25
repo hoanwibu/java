@@ -56,11 +56,13 @@ public class cal {
         gbc.gridwidth = 1;
         gbc.gridheight = 2;
         centerPanel.add(button[counter++], gbc);
-        gbc.gridwidth = 2;
+        gbc.gridwidth = 3;
         gbc.gridx = 0;
         gbc.gridy = 4;
         centerPanel.add(button[counter++], gbc);
-
+        gbc.gridx = 3;
+        gbc.gridy = 4;
+        centerPanel.add(button[counter++], gbc);
         contentPane.add(northPanel, BorderLayout.PAGE_START);
         contentPane.add(centerPanel, BorderLayout.CENTER);
         frame.setContentPane(contentPane);
