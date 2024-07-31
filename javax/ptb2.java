@@ -26,12 +26,10 @@ public class ptb2 {
 
         JPanel pnCenter = new JPanel();
         pnCenter.setLayout(new BoxLayout(pnCenter, BoxLayout.Y_AXIS));
-        pnCenter.setBackground(Color.RED);
         pnCenter.setPreferredSize(new Dimension(0, 100));
 
         JPanel pna = new JPanel();
         pna.setBackground(Color.RED);
-
         JLabel lblA = new JLabel("a");
         JTextField txtA = new JTextField(10);
         pna.add(lblA);
@@ -40,6 +38,7 @@ public class ptb2 {
 
         JPanel pnb = new JPanel();
         JLabel lblB = new JLabel("b");
+        pnb.setBackground(Color.BLUE);
         JTextField txtB = new JTextField(10);
         pnb.add(lblB);
         pnb.add(txtB);
@@ -47,6 +46,7 @@ public class ptb2 {
 
         JPanel pnc = new JPanel();
         JLabel lblC = new JLabel("c");
+        pnc.setBackground(Color.GREEN);
         JTextField txtC = new JTextField(10);
         pnc.add(lblC);
         pnc.add(txtC);
